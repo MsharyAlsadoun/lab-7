@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Header Color</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("#colorForm").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+                var colorInput = document.querySelector("#colorInput").value;
+                document.querySelector("#hello").style.color = colorInput;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <form id="colorForm">
+        <input type="text" id="colorInput" placeholder="Enter color">
+        <input type="submit" value="Change Color">
+    </form>
+</body>
+</html>
